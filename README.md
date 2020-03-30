@@ -15,5 +15,5 @@ The books are coded into the python code, but are still changeble by replacing t
 
 The result of the code has been formulated to make very clear what the output number means. If you change the book that is used to run the code, it will not change in the output.
 
-## Authors
+## Author
 * **Jurriën Steegman** - *initial work* - [JurriSteeg](https://github.com/JurriSteeg)
