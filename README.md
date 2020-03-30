@@ -9,7 +9,7 @@ When you run the code, there is no need for implementing the books in the comman
 ```
 python3 book_counter.py
 ```
-They are coded into the python code, but are still changeble by replacing them in one line of the code.
+The books are coded into the python code, but are still changeble by replacing them in one line of the code.
 
 ### Results
 
