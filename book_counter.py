@@ -33,6 +33,9 @@ def length_calculus(words):
 
 def main():
 	
+	#this ection of the code opens the text files that contain English the books
+	#and send back a list with the length of every individual English 
+	#sentence per book and the total of sentences per book
 	maxE_wordli = word_count('Max_Havelaar_English.txt')
 	maxE_words, maxE_sen = length_calculus(maxE_wordli)
 	lucE_wordli = word_count('Lucifer_English.txt')
@@ -40,11 +43,15 @@ def main():
 	chrE_wordli = word_count('Christmas_Carol_English.txt')
 	chrE_words, chrE_sen = length_calculus(chrE_wordli)
 	
+	#this part of the code calulates the total average of the 
+	#sentence length in English sentences. Which will be used later
 	english_total = maxE_wordli + lucE_wordli + chrE_wordli
 	english_words, english_sen = length_calculus(english_total)
 	english_average = int(english_words/english_sen)
 	
-	
+	#this ection of the code opens the text files that contain Dutch the books
+	#and send back a list with the length of every individual Dutch 
+	#sentence per book and the total of sentences per book
 	maxD_wordli = word_count('Max_Havelaar_Dutch.txt')
 	maxD_words, maxD_sen = length_calculus(maxD_wordli)
 	lucD_wordli = word_count('Lucifer_Dutch.txt')
@@ -52,29 +59,36 @@ def main():
 	chrD_wordli = word_count('Christmas_Carol_Dutch.txt')
 	chrD_words, chrD_sen = length_calculus(chrD_wordli)
 	
+	#this part of the code calulates the total average of the 
+	#sentence length in Dutch sentences.
 	dutch_total = maxD_wordli + lucD_wordli + chrD_wordli
 	dutch_words, dutch_sen = length_calculus(dutch_total)
 	dutch_average = int(dutch_words/dutch_sen)
 	
 	
+	#Here is the point where every sentence is compared to the English 
+	#average
 	higherD = 0 
 	higherE = 0 
 	lowerD = 0 
 	lowerE = 0
 	
+	#The Dutch sentences are compared to the English total average
 	for i in dutch_total:
 		if i >= english_average:
 			higherD += 1
 		else:
 			lowerD += 1
-			
+	
+	#The English sentences are compared to the English total average
 	for i in english_total:
 		if i >= english_average:
 			higherE += 1
 		else:
 			lowerE += 1
 	
-	
+	#This section of the code displays the data that has been used in
+	#the research
 	print("The average sentence length in the English Max Havelaar is: ", int(maxE_words/maxE_sen))
 	print("The average sentence length in the English Lucifer is: ", int(lucE_words/lucE_sen))
 	print("The average sentence length in the English Christmas Carol is: ", int(chrE_words/chrE_sen), "\n")
